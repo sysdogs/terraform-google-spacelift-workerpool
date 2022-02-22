@@ -98,6 +98,8 @@ resource "google_compute_instance_template" "spacelift-worker" {
 }
 
 resource "google_compute_instance_group_manager" "spacelift-worker" {
+  provider = google-beta
+
   name = var.instance_group_manager_name
 
   base_instance_name = var.instance_group_base_instance_name

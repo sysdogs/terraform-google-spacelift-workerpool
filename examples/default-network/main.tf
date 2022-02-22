@@ -1,6 +1,6 @@
 provider "google" {
-  project     = "spacelift-development"
-  region      = "us-central1"
+  project = "spacelift-development"
+  region  = "us-central1"
 }
 
 module "spacelift-workers" {

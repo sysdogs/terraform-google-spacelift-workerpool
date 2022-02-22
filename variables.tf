@@ -1,6 +1,7 @@
 terraform {
   required_providers {
-    google = { source = "hashicorp/google" }
+    google      = { source = "hashicorp/google" }
+    google-beta = { source = "hashicorp/google-beta" }
   }
 }
 
@@ -23,7 +24,7 @@ variable "domain_name" {
 variable "email" {
   type        = string
   description = "Service account email to use"
-  default = null
+  default     = null
 }
 
 variable "image" {
@@ -35,13 +36,13 @@ variable "image" {
 variable "instance_group_manager_name" {
   type        = string
   description = "Name for instance group manager"
-  default = "spacelift-workers"
+  default     = "spacelift-workers"
 }
 
 variable "instance_group_base_instance_name" {
   type        = string
   description = "Base name for instances in group"
-  default = "spacelift-worker"
+  default     = "spacelift-worker"
 }
 
 variable "machine_type" {
@@ -69,4 +70,3 @@ variable "zone" {
   type        = string
   description = "Zone to create workerpool in"
 }
-
